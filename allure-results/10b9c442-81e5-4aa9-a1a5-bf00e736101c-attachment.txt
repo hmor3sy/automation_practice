@@ -1,0 +1,11 @@
+
+[0;7m------------------------------------------------------------------------------------------------------------------------------------------------
+                                        Starting Execution: '1 out of 1' test cases in the current suite                                        
+                                                Test Method: 'AddProductTest.loginAndAddProducts'                                                
+------------------------------------------------------------------------------------------------------------------------------------------------
+[0m
+[ReportManager] Type "Email Address" @04-06-2025 14:36:26.0871 PM
+[ReportManager] Type "Password" @04-06-2025 14:36:26.0936 PM
+[ReportManager] Click "Login" @04-06-2025 14:36:26.0987 PM
+[ReportManager] Capture full screenshot @04-06-2025 14:36:32.0157 PM
+[ReportManager] Successfully created attachment 'Screenshot - captureScreenshot_14-36-32-156_04062025' @04-06-2025 14:36:32.0160 PM
