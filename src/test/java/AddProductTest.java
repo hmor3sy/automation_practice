@@ -8,12 +8,13 @@ public class AddProductTest {
     SHAFT.TestData.JSON testJson;
     SHAFT.TestData.EXCEL testExcel;
 
-    @Test
+    @Test(description = "Login and navigate then add products less than 1000 to cart")
     public void loginAndAddProducts()  {
         new P01_LoginPage(driver)
                 .login(testExcel.getCellData("email"), testJson.getTestData("password"))
                 .navigateToProducts()
-                .addProducts();
+                .addProducts()
+                .productsVerification();
 
 
     }

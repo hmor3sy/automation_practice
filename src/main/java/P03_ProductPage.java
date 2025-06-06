@@ -15,10 +15,11 @@ public class P03_ProductPage {
     // Locators
     By productsCard = By.xpath("//div[@class='productinfo text-center']");
     By continueBtn = By.xpath("//button[@data-dismiss='modal']");
+    By viewCartBtn = By.xpath("//a[@href='/view_cart']");
 
     // Methods
     @Step("Add Products with Price less than 1000")
-    public void addProducts() {
+    public P03_ProductPage addProducts() {
         List<WebElement> products = driver.getDriver().findElements(productsCard);
         try {
             for (int i = 0; i < products.size(); i++) {
@@ -37,5 +38,12 @@ public class P03_ProductPage {
         } catch (NumberFormatException e) {
             throw new RuntimeException(e);
         }
+        return this;
+    }
+
+    @Step("Verify view cart products")
+    public void productsVerification(){
+        driver.element().click(viewCartBtn)
+                .and().browser().captureScreenshot();
     }
 }
