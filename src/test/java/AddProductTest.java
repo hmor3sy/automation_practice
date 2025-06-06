@@ -9,14 +9,13 @@ public class AddProductTest {
     SHAFT.TestData.EXCEL testExcel;
 
     @Test
-    public void loginAndAddProducts() throws InterruptedException {
+    public void loginAndAddProducts()  {
         new P01_LoginPage(driver)
                 .login(testExcel.getCellData("email"), testJson.getTestData("password"))
-                .navigateToProducts();
+                .navigateToProducts()
+                .addProducts();
 
 
-        Thread.sleep(3000);
-        driver.browser().captureScreenshot();
     }
 
     @BeforeClass

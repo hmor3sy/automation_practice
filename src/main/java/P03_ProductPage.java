@@ -1,4 +1,9 @@
 import com.shaft.driver.SHAFT;
+import org.openqa.selenium.By;
+import io.qameta.allure.Step;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 public class P03_ProductPage {
     SHAFT.GUI.WebDriver driver;
@@ -8,9 +13,29 @@ public class P03_ProductPage {
     }
 
     // Locators
-
+    By productsCard = By.xpath("//div[@class='productinfo text-center']");
+    By continueBtn = By.xpath("//button[@data-dismiss='modal']");
 
     // Methods
+    @Step("Add Products with Price less than 1000")
+    public void addProducts() {
+        List<WebElement> products = driver.getDriver().findElements(productsCard);
+        try {
+            for (int i = 0; i < products.size(); i++) {
+                int productPrice = Integer.parseInt(driver.getDriver()
+                        .findElement(By.xpath("(//div[@class='productinfo text-center']/h2)["+(i+1)+"]"))
+                        .getText().replaceAll("[^0-9]",""));
 
+                System.out.println("Price of product " + (i + 1));
+                if (productPrice < 1000){
+                    driver.element().click(By.xpath("(//div[@class='productinfo text-center'])["+(i+1)+"]/a"))
+                            .click(continueBtn);
+                    System.out.println("Added product with price " + productPrice + "to the cart");
+                }
 
+            }
+        } catch (NumberFormatException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

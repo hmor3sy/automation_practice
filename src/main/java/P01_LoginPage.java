@@ -1,4 +1,5 @@
 import com.shaft.driver.SHAFT;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 
 public class P01_LoginPage {
@@ -14,6 +15,7 @@ public class P01_LoginPage {
     By loginBtn = By.xpath("//button[@data-qa='login-button']");
 
     // Methods
+    @Step("Login to Home Page")
     public P02_HomePage login(String email, String password){
         driver.element().type(emailInput,email).
                 and().type(passwordInput,password).
