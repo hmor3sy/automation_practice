@@ -1,6 +1,16 @@
 {
-  "email": "Joe@test.com",
+  "loginEmail": "Joe@test.com",
   "password": "P@ssw0rd",
-  "url": "https://automationexercise.com/login"
-
+  "signUpName": "ali33",
+  "signUpEmail": "hassan",
+  "firstName": "firstName",
+  "lastName": "lastName",
+  "company": "company",
+  "address1": "address1",
+  "address2": "address2",
+  "state": "state",
+  "city": "city",
+  "zipcode": "123456",
+  "mobileNo": "123456789",
+  "createdMsg": "Account Created!"
 }

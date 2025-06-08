@@ -3,16 +3,20 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class AddProductTest {
+public class ProductTest {
     SHAFT.GUI.WebDriver driver;
     SHAFT.TestData.JSON testJson;
     SHAFT.TestData.EXCEL testExcel;
 
+
     @Test(description = "Login and navigate then add products less than 1000 to cart")
     public void loginAndAddProducts()  {
-        new P01_LoginPage(driver)
-                .login(testExcel.getCellData("email"), testJson.getTestData("password"))
-                .navigateToProducts()
+        new LoginPage(driver)
+                .navigate()
+                .login(testExcel.getCellData("loginEmail"), testJson.getTestData("password"));
+        new HomePage(driver)
+                .navigateToProducts();
+        new ProductPage(driver)
                 .addProducts()
                 .productsVerification();
 
@@ -24,7 +28,6 @@ public class AddProductTest {
         driver = new SHAFT.GUI.WebDriver();
         testJson = new SHAFT.TestData.JSON(SHAFT.Properties.paths.testData() + "testData.json");
         testExcel = new SHAFT.TestData.EXCEL(SHAFT.Properties.paths.testData() + "testData.xlsx");
-        driver.browser().navigateToURL(testJson.getTestData("url"));
     }
 
     @AfterClass

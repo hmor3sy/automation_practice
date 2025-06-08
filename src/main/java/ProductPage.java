@@ -5,21 +5,28 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class P03_ProductPage {
+public class ProductPage {
     SHAFT.GUI.WebDriver driver;
 
-    public P03_ProductPage(SHAFT.GUI.WebDriver driver) {
+    public ProductPage(SHAFT.GUI.WebDriver driver) {
         this.driver = driver;
     }
-
+    private String url = "https://automationexercise.com/login";
     // Locators
     By productsCard = By.xpath("//div[@class='productinfo text-center']");
     By continueBtn = By.xpath("//button[@data-dismiss='modal']");
-    By viewCartBtn = By.xpath("//a[@href='/view_cart']");
+    By viewCartBtn = By.xpath("(//a[@href='/view_cart'])[1]");
 
     // Methods
+
+    @Step("Navigate to login page")
+    public ProductPage navigate(){
+        driver.browser().navigateToURL(url);
+        return this;
+    }
+
     @Step("Add Products with Price less than 1000")
-    public P03_ProductPage addProducts() {
+    public ProductPage addProducts() {
         List<WebElement> products = driver.getDriver().findElements(productsCard);
         try {
             for (int i = 0; i < products.size(); i++) {
