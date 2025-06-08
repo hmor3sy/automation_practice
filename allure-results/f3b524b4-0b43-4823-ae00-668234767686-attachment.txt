@@ -1,0 +1,37 @@
+
+[0;7m------------------------------------------------------------------------------------------------------------------------------------------------
+                                        Starting Execution: '1 out of 1' test cases in the current suite                                        
+                                                 Test Method: 'RegistrationTest.registerNewUser'                                                 
+                                                      Test Description: 'Register New User'                                                      
+------------------------------------------------------------------------------------------------------------------------------------------------
+[0m
+[ReportManager] Target URL: "https://automationexercise.com/login" @08-06-2025 17:23:22.0501 PM
+[ReportManager] Initial URL: "about:blank" @08-06-2025 17:23:22.0517 PM
+[ReportManager] Navigate to url "https://automationexercise.com/login". @08-06-2025 17:23:23.0533 PM
+[ReportManager] Type "Name" @08-06-2025 17:23:23.0691 PM
+[ReportManager] Type "Email Address" @08-06-2025 17:23:23.0757 PM
+[ReportManager] Javascript  click "Signup" @08-06-2025 17:23:23.0790 PM
+[ReportManager] Click "Mr." @08-06-2025 17:23:24.0229 PM
+[ReportManager] Type "Password *" @08-06-2025 17:23:24.0301 PM
+[ReportManager] Select "1" from "By.xpath: (//label[contains(.,'Date of Birth')]//following::select)[1]". @08-06-2025 17:23:24.0688 PM
+[ReportManager] Select "September" from "By.xpath: (//label[contains(.,'Date of Birth')]//following::select)[2]". @08-06-2025 17:23:24.0961 PM
+[ReportManager] Select "1980" from "By.xpath: (//label[contains(.,'Date of Birth')]//following::select)[3]". @08-06-2025 17:23:25.0550 PM
+[ReportManager] Type "First name *" @08-06-2025 17:23:25.0609 PM
+[ReportManager] Type "Last name *" @08-06-2025 17:23:25.0700 PM
+[ReportManager] Type "Company" @08-06-2025 17:23:25.0774 PM
+[ReportManager] Type "Address * (Street address, P.O. Box, Company name, etc.)" @08-06-2025 17:23:25.0832 PM
+[ReportManager] Type "Address 2" @08-06-2025 17:23:25.0890 PM
+[ReportManager] Click "Country *" @08-06-2025 17:23:25.0953 PM
+[ReportManager] Click "United States" @08-06-2025 17:23:25.0981 PM
+[ReportManager] Type "State *" @08-06-2025 17:23:26.0048 PM
+[ReportManager] Type "City * Zipcode *" @08-06-2025 17:23:26.0098 PM
+[ReportManager] Type "By.xpath: (//label[contains(.,'Zipcode *')]/following-sibling::input)[1]" @08-06-2025 17:23:26.0164 PM
+[ReportManager] Type "Mobile Number *" @08-06-2025 17:23:26.0223 PM
+[ReportManager] Click "Create Account" @08-06-2025 17:23:26.0381 PM
+[ReportManager] Verify that the element located by "By.xpath: //h2[@data-qa='account-created']" text equals "Account Created!", ignoring case sensitivity. @08-06-2025 17:23:26.0423 PM
+[ReportManager] Get  text "ACCOUNT CREATED!" @08-06-2025 17:23:27.0250 PM
+[ReportManager] Expected "Account Created!", and actual "ACCOUNT CREATED!" @08-06-2025 17:23:27.0252 PM
+[ReportManager] Successfully created attachment 'Screenshot - Verify_17-23-28-525_08062025' @08-06-2025 17:23:28.0527 PM
+[ReportManager] Expected "Account Created!", and actual "ACCOUNT CREATED!" @08-06-2025 17:23:28.0528 PM
+[ReportManager] Verification passed @08-06-2025 17:23:28.0530 PM
+[ReportManager] Click "Continue" @08-06-2025 17:23:28.0594 PM
