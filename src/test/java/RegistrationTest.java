@@ -12,7 +12,10 @@ public class RegistrationTest {
     @Test(description = "Register New User")
     public void registerNewUser(){
         new LoginPage(driver)
-                .navigate()
+                .navigate();
+        new RegisterPage(driver)
+                .verifyVisibilityOfSignUpPage(testJson.getTestData("signUpText"));
+        new LoginPage(driver)
                 .register(testJson.getTestData("signUpName"),
                         testJson.getTestData("signUpEmail")+timeStamp+"@gmail.com");
         new RegisterPage(driver)
@@ -23,6 +26,12 @@ public class RegistrationTest {
                         testJson.getTestData("zipcode"), testJson.getTestData("mobileNo"))
                 .verifyThatAccountCreated(testJson.getTestData("createdMsg"))
                 .clickOnContinue();
+        new NavigationBarPage(driver)
+        .verifyLoggedUserVisiblity(testJson.getTestData("loggedInText"))
+                .clickOnDeleteAccount();
+        new RegisterPage(driver)
+                .verifyDeleteAccount(testJson.getTestData("deleteAccountMsg"))
+                .clickOnContinue();
 
     }
 
@@ -30,8 +39,6 @@ public class RegistrationTest {
     public void setup(){
         driver = new SHAFT.GUI.WebDriver();
         testJson = new SHAFT.TestData.JSON(SHAFT.Properties.paths.testData() + "testData.json");
-//        driver.browser().navigateToURL(testJson.getTestData("url"));
-
     }
 
     @AfterClass

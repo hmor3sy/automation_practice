@@ -1,0 +1,9 @@
+[ReportManager] Post processing some properties to support platforms-specific restrictions. @11-06-2025 14:32:41.0362 PM
+[ReportManager] Setting "targetOperatingSystem" property with "windows". @11-06-2025 14:32:41.0375 PM
+[ReportManager] Setting "screenshotParams_scalingFactor" property with "1.25". @11-06-2025 14:32:41.0501 PM
+[ReportManager] Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-debugging-port=54487, --start-maximized], extensions: []}, pageLoadStrategy: none, timeouts: {pageLoad: 30000, script: 30000}, webSocketUrl: true} @11-06-2025 14:32:41.0522 PM
+[ReportManager] Attempting to run locally on: "Windows | Chrome". @11-06-2025 14:32:41.0523 PM
+[ReportManager] Identifying OS/Driver combination. Please note that if a new browser/driver executable will be downloaded it may take some time depending on your connection... @11-06-2025 14:32:41.0523 PM
+[ReportManager] Successfully Opened: "Windows | Chrome". @11-06-2025 14:32:42.0508 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/ProductsData.json". @11-06-2025 14:32:42.0515 PM
+[ReportManager] Successfully created attachment 'Test Data - JSON' @11-06-2025 14:32:42.0517 PM

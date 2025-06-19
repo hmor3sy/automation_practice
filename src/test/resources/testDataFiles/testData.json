@@ -12,5 +12,14 @@
   "city": "city",
   "zipcode": "123456",
   "mobileNo": "123456789",
-  "createdMsg": "Account Created!"
+  "createdMsg": "Account Created!",
+  "signUpText": "New User Signup!",
+  "loggedInText": "Logged in as",
+  "deleteAccountMsg": "ACCOUNT DELETED!",
+  "loginToYourAccountMsg": "Login to your account",
+  "contactUsName": "ali",
+  "contactUsEmail": "ali@gmail.com",
+  "contactUsSubject": "complaint",
+  "contactUsMsg": "your products is very bad",
+  "contactSuccessMsg": "Success! Your details have been submitted successfully."
 }
